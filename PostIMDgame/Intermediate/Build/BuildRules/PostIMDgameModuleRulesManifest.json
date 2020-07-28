@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\StarByteStudios\\Git\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame\\PostIMDgame.Build.cs",
-		"D:\\StarByteStudios\\Git\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
-		"D:\\StarByteStudios\\Git\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs"
+		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame\\PostIMDgame.Build.cs",
+		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
+		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs"
 	],
-	"EngineVersion": "4.25.0"
+	"EngineVersion": "4.25.2"
 }
