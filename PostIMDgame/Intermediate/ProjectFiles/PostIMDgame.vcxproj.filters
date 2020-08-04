@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\PostIMDgame.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{994A7929-FF69-4756-BE62-24577C55F340}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\PostIMDgame.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PostIMDgameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{033E5C4C-0C19-45F8-8DAE-70635EC3C2A2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{2868A5EB-E6CC-45BA-BDEA-F1BF1DCA4D3C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\EasyMultiSave">
+      <UniqueIdentifier>{10E1D577-C9D3-482E-A061-34FDD1A7EEF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\EasyMultiSave\Source">
+      <UniqueIdentifier>{194BF215-89E8-4F25-91BA-01546EEF4F70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\EasyMultiSave\Source\EasyMultiSave">
+      <UniqueIdentifier>{AF0FD65D-93FF-4EED-83B5-7B94809DFD2C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\EasyMultiSave.Build.cs">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave</Filter>
+    </None>
+    <Filter Include="Plugins\EasyMultiSave\Source\EasyMultiSave\Private">
+      <UniqueIdentifier>{B33CAD60-7AD9-46D3-9CE3-A03015774968}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Private\EasyMultiSave.cpp">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Private\EMSAsyncLoadGame.cpp">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Private\EMSAsyncSaveGame.cpp">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Private\EMSFunctionLibrary.cpp">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Private\EMSObject.cpp">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\EasyMultiSave\Source\EasyMultiSave\Public">
+      <UniqueIdentifier>{842428F8-716F-40C1-A51A-9FF30C220120}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EasyMultiSave.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSActorSaveInterface.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSAsyncLoadGame.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSAsyncSaveGame.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSData.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSFunctionLibrary.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSInfoSaveGame.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSObject.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSPersistentSaveGame.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSPluginSettings.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\EasyMultiSave\Source\EasyMultiSave\Public\EMSProfileSaveGame.h">
+      <Filter>Plugins\EasyMultiSave\Source\EasyMultiSave\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\EasyMultiSave\EasyMultiSave.uplugin">
+      <Filter>Plugins\EasyMultiSave</Filter>
+    </None>
+    <Filter Include="Plugins\EasyMultiSave\Config">
+      <UniqueIdentifier>{465D05AB-CC95-468C-94BB-C74D795BB872}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\EasyMultiSave\Config\FilterPlugin.ini">
+      <Filter>Plugins\EasyMultiSave\Config</Filter>
+    </None>
+    <Filter Include="Plugins\EasyMultiSave\Resources">
+      <UniqueIdentifier>{3F32310F-D683-4C65-9648-C94DF6497566}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\EasyMultiSave\Resources\Icon128.png">
+      <Filter>Plugins\EasyMultiSave\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\PSD2UMG">
+      <UniqueIdentifier>{1CD59BAB-9885-4C54-886B-32181D441500}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\PSD2UMG\PSD2UMG.uplugin">
+      <Filter>Plugins\PSD2UMG</Filter>
+    </None>
+    <Filter Include="Plugins\PSD2UMG\Resources">
+      <UniqueIdentifier>{17F4116D-171A-4E21-AF15-616270FA761A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\PSD2UMG\Resources\Icon128.png">
+      <Filter>Plugins\PSD2UMG\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\PSD2UMG\Source">
+      <UniqueIdentifier>{C3A75863-6CDB-428A-9D67-63931E3C0446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG">
+      <UniqueIdentifier>{0E39DBE2-A489-4180-A8C5-7666FC6C0BF7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\PSD2UMG.Build.cs">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG</Filter>
+    </None>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\Private">
+      <UniqueIdentifier>{81DDC584-C326-481C-9193-B5E8C14B55C1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Private\AssetTypeActions_PSD2UMGCache.cpp">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Private\PSD2UMG.cpp">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Private\PSD2UMGCache.cpp">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Private\PSD2UMGCacheFactory.cpp">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Private\PSD2UMGPrivatePCH.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Private</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\Public">
+      <UniqueIdentifier>{5D281F62-EA00-4C7B-816F-8641706FBBAA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Public\AssetTypeActions_PSD2UMGCache.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Public\IPSD2UMG.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Public\PSD2UMGCache.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\Public\PSD2UMGCacheFactory.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty">
+      <UniqueIdentifier>{A34E8938-6FCC-430F-BD0B-61CB6C5F0D58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser">
+      <UniqueIdentifier>{419DC7A0-FF28-406D-BB3A-4B36B907E3FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes">
+      <UniqueIdentifier>{15ABA4DF-757C-414B-BF21-1DC0A33ED953}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\BitmapWriter.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\PSDParser.Base.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\PSDParser.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd">
+      <UniqueIdentifier>{66427E55-6659-41A9-BD8A-90DBFD72B5DE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd\psd.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd\psd_p.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd\list">
+      <UniqueIdentifier>{8688E409-8152-45BF-AED1-4016DBDEB9E1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd\list\list.h">
+      <Filter>Plugins\PSD2UMG\Source\PSD2UMG\ThirdParty\PSDParser\Includes\psd\list</Filter>
+    </ClInclude>
+    <Filter Include="Source\PostIMDgame">
+      <UniqueIdentifier>{00E2271A-2B78-46D1-818C-0A2306302455}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PostIMDgame\ComponentFunctions.cpp">
+      <Filter>Source\PostIMDgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PostIMDgame\ComponentFunctions.h">
+      <Filter>Source\PostIMDgame</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\PostIMDgame\PostIMDgame.Build.cs">
+      <Filter>Source\PostIMDgame</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\PostIMDgame\PostIMDgame.cpp">
+      <Filter>Source\PostIMDgame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PostIMDgame\PostIMDgame.h">
+      <Filter>Source\PostIMDgame</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

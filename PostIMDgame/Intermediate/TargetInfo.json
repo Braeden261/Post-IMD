@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "PostIMDgame",
-			"Path": "D:\\StarByteStudios\\Git\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
+			"Path": "F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "PostIMDgameEditor",
-			"Path": "D:\\StarByteStudios\\Git\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs",
+			"Path": "F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

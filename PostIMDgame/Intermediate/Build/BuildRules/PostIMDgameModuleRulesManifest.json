@@ -1,8 +1,10 @@
 {
 	"SourceFiles": [
-		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame\\PostIMDgame.Build.cs",
-		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
-		"D:\\SummerGame\\Github\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs"
+		"F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame\\PostIMDgame.Build.cs",
+		"F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Plugins\\EasyMultiSave\\Source\\EasyMultiSave\\EasyMultiSave.Build.cs",
+		"F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Plugins\\PSD2UMG\\Source\\PSD2UMG\\PSD2UMG.Build.cs",
+		"F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Source\\PostIMDgame.Target.cs",
+		"F:\\Users\\aleks\\Documents\\GitHub\\Post-IMD\\PostIMDgame\\Source\\PostIMDgameEditor.Target.cs"
 	],
-	"EngineVersion": "4.25.2"
+	"EngineVersion": "4.25.1"
 }
