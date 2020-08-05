@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"PCH.PathFollow.h.obj",
+		"Module.PathFollow.cpp.obj",
+		"Module.PathFollow.gen.cpp.obj"
+	]
+}
