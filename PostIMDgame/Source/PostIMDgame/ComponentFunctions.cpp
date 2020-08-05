@@ -4,7 +4,6 @@
 #include "ComponentFunctions.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
-#include "Misc/LocalTimestampDirectoryVisitor.h"
 
 USceneComponent* UComponentFunctions::AddComponentToObject(UClass * componentClass, AActor * parent) {
 
@@ -23,46 +22,145 @@ USceneComponent* UComponentFunctions::AddComponentToObject(UClass * componentCla
 	return newComponent;
 }
 
-//https://sb1985.com/other-2/editor/how-to-create-a-read-write-system-for-txt-files-c-tutorial/
-bool UComponentFunctions::memeload(FString FileName, FString& FinalText) {
-	return FFileHelper::LoadFileToString(FinalText, *(FPaths::ProjectDir() + FileName));
-}
-
-bool UComponentFunctions::memesave(FString FileText, FString Filename) {
-	return FFileHelper::SaveStringToFile(FileText, *(FPaths::ProjectDir() + Filename));
-}
-
 //AS 8/3/2020
 //https://forums.unrealengine.com/development-discussion/c-gameplay-programming/50366-find-files-by-extension-ifilemanager-findfilesrecursive
-void UComponentFunctions::test(const FString fileName, FString& outName) {
+//@starting Path is relative to the project's base folder
+void UComponentFunctions::findFilePathFromName(const FString startingPath, const FString fileName, FString& outName) {
 
 	//get NPC path
-	FString fp = FPaths::ConvertRelativePathToFull(FPaths::ProjectContentDir()) + "NPC/";
+	FString fp = FPaths::ConvertRelativePathToFull(FPaths::ProjectContentDir()) / startingPath / "";
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, *fp);
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, *fp);
 
 	//get the file manager
 	IFileManager & fm = IFileManager::Get();
 
+	//the output list of files it finds
 	TArray<FString> files;
 
-	//csv extension type
-	TCHAR* csvExt = _T(".csv");
-
 	//recursively looks at every single file and folder, looking for this file
-	//fm.FindFiles(files, *fp, csvExt);
-	//literally dont understand why tf this doesnt do anything??????
-	fm.FindFilesRecursive(files, *fp, csvExt, true, true, false);
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::FromInt(files.Num()));
+	//not sure why * is needed on these strings...
+	fm.FindFilesRecursive(files, *fp, *fileName, true, false, false);
+
+	//log the num of files found
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::FromInt(files.Num()));
 
 	//go thru each item and do something with it
 
 	for (int8 i = 0; i < files.Num(); i++) {
 
 		if (files.IsValidIndex(i)) {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, files[i]);
+			//output first one
+			outName = files[i];
+
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, files[i]);
+			break;
 		}
 	}
 
+}
+
+void UComponentFunctions::OpenFilepathAndOutputDialogueStruct(const FString filepath, FNewDialogueStructure& output, const int row) {
+
+	//UE4 c++ makes no sense to me. why cant i create a filehelper object?
+	//FFileHelper fh = new FFileHelper();
+
+	//if anything is empty then leave early
+	
+
+	FString fileOutput;
+
+	FFileHelper::LoadFileToString(fileOutput, *filepath);
+
+	//parse fileoutput
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, fileOutput);
+
+	output = processCSVToDialogueStruct(fileOutput, row);
+}
+
+FNewDialogueStructure UComponentFunctions::processCSVToDialogueStruct(const FString fstream, const int row) {
+	
+	FNewDialogueStructure tempStruct;
+
+	//process the text manually lmao
+
+	TArray<FString> headerList;
+	
+	bool header = true;
+	int rowCount = 1;
+
+	//go through each element in the array
+	for (int charIndex = 0; charIndex <= fstream.Len(); charIndex++) {
+		
+		//if its the first row
+		if (header) {
+			
+			FString tempVal = "";
+
+			//peek ahead until it finds a comma, while constructing the current val
+			while (fstream[charIndex] != *"," || fstream[charIndex] != *LINE_TERMINATOR) {
+				
+				tempVal.AppendChar(fstream[charIndex]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, *tempVal);
+				//augment our base iteration
+				charIndex++;
+			}
+
+			headerList.Add(tempVal);
+		}
+
+		//found the row! now parse then store contents
+		else if (rowCount == row) {
+			
+			FString tempVal = "";
+
+			//peek ahead until it finds a comma, while constructing the current val
+			while(fstream[charIndex] != *"," || fstream[charIndex] != *LINE_TERMINATOR) {
+				tempVal.AppendChar(fstream[charIndex]);
+				charIndex++;
+			}
+			
+			//first arg is the member of the struct, second is the value, third is the struct to change
+			addToStruct(headerList[row], tempVal, tempStruct);
+
+		}
+
+		//count adds when it finds a break line
+		if (fstream[charIndex] == *LINE_TERMINATOR) {
+			rowCount++;
+
+			//ternary operator lmao
+			//if header is true, then switch it to false
+			header == true ? header = false : false;
+		}
+	}
+
+	return tempStruct;
+}
+
+//CRINGE I KNOW BUT I WANTED TO 'DNAMICALLY' REFERENCE A STRUCT VARIABLE BASED ON STRING NAME
+void UComponentFunctions::addToStruct(const FString name, const FString value, FNewDialogueStructure& output) {
+	if (name == "ROW_ID")
+		output.ROW_ID = FCString::Atof(*value);
+	else if (name == "SELECTION_ID")
+		output.SELECTION_ID = FCString::Atof(*value);
+	else if (name == "PROGRESSION_ID")
+		output.PROGRESSION_ID = FCString::Atof(*value);
+	else if (name == "LINE_ID")
+		output.LINE_ID = FCString::Atof(*value);
+	else if (name == "Text")
+		output.Text = FText::FromString(value);
+	else if (name == "GOTO_PROGRESSION")
+		output.GOTO_PROGRESSION = FCString::Atof(*value);
+	else if (name == "GOTO_SELECTION")
+		output.GOTO_SELECTION = FCString::Atof(*value);
+	else if (name == "GOTO_LINE")
+		output.GOTO_LINE = FCString::Atof(*value);
+	else if (name == "Exit")
+		output.Exit = value.ToBool();
+	else if (name == "Time")
+		output.Time = FCString::Atof(*value);
+	else if (name == "Audio")
+		output.Audio = value;
 }
